@@ -7,159 +7,309 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeonggi/suwon/</loc>
+    <loc>https://sevenrock-massage.pages.dev/suwon/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/services/swedish/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/services/aroma/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/price/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/services/deeptissue/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/guide/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/services/thai/</loc>
+    <loc>https://sevenrock-massage.pages.dev/reservation/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/services/sports/</loc>
+    <loc>https://sevenrock-massage.pages.dev/guide/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/services/lymph/</loc>
+    <loc>https://sevenrock-massage.pages.dev/reviews/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/customer/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/seoul/</loc>
+    <loc>https://sevenrock-massage.pages.dev/privacy-policy/</loc>
     <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/course/relax/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeonggi/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/aroma/</loc>
     <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/incheon/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/sports/</loc>
     <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/busan/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/couple/</loc>
     <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/daegu/</loc>
+    <loc>https://sevenrock-massage.pages.dev/course/corporate/</loc>
     <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/daejeon/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gwangju/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/ulsan/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/sejong/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gangwon/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/chungcheong/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/jeolla/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeongsang/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/jeju/</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeonggi/suwon/jangan-gu/</loc>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeonggi/suwon/gwonseon-gu/</loc>
+    <loc>https://sevenrock-massage.pages.dev/reviews/jangan-gu/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/pajang-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/yulcheon-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/jeongja-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/yeonghwa-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/songjuk-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/jowon-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/jangan-gu/yeonmu-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeonggi/suwon/paldal-gu/</loc>
+    <loc>https://sevenrock-massage.pages.dev/reviews/gwonseon-gu/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/seryu-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/pyeong-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/seodun-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/guun-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/geumgok-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/homaesil-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/gwonseon-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/gokseon-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/gwonseon-gu/ipbuk-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sevenrock-massage.pages.dev/areas/gyeonggi/suwon/yeongtong-gu/</loc>
+    <loc>https://sevenrock-massage.pages.dev/reviews/paldal-gu/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/ingye-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/maegyo-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/maesan-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/godeung-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/hwaseo-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/ji-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/uman-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/paldal-gu/haenggung-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/yeongtong-gu/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/reviews/yeongtong-gu/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/yeongtong-gu/maetan-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/yeongtong-gu/woncheon-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/yeongtong-gu/gwanggyo-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/yeongtong-gu/yeongtong-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sevenrock-massage.pages.dev/suwon/yeongtong-gu/mangpo-dong/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
