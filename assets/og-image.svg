@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17120f"/>
+      <stop offset="1" stop-color="#100d0b"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e7b486"/>
+      <stop offset="1" stop-color="#cda659"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="78%" cy="18%" r="60%">
+      <stop offset="0" stop-color="#e7b486" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#e7b486" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="80" y="250" font-family="Arial, sans-serif" font-size="40" font-weight="700"
+        fill="url(#acc)" letter-spacing="8">SEVENROCK</text>
+  <text x="80" y="350" font-family="Arial, sans-serif" font-size="84" font-weight="800"
+        fill="#f3ece4" letter-spacing="-2">세븐록 마사지</text>
+  <text x="80" y="430" font-family="Arial, sans-serif" font-size="36"
+        fill="#b6a99b">수원·전국 출장마사지 · 24시간 예약 상담</text>
+  <text x="80" y="540" font-family="Arial, sans-serif" font-size="44" font-weight="800"
+        fill="url(#acc)">0508-202-4743</text>
+  <rect x="80" y="470" width="220" height="6" rx="3" fill="url(#acc)"/>
+</svg>
