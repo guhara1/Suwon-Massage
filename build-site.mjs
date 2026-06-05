@@ -213,7 +213,7 @@ const navHtml = `
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="brand" href="/" aria-label="${brand} 홈">
-      <span class="logo">${brandEn}</span><span class="ko">${brand}</span>
+      <span class="logo">${brandEn}</span>
     </a>
     <nav class="nav" aria-label="주 메뉴">
       <div class="nav-item"><a href="/">홈</a></div>
