@@ -93,6 +93,32 @@ node indexnow.mjs --dry                 # 전송 없이 대상만 확인
 제출 엔드포인트: `api.indexnow.org`, `www.bing.com`, `searchadvisor.naver.com`
 (IndexNow는 참여 검색엔진끼리 제출을 공유하며, 키 파일이 라이브여야 검증됩니다.)
 
+## 구글 Indexing API (옵션)
+
+구글은 IndexNow 미참여라 별도 통보가 필요합니다. `google-index.mjs` + 워크플로의
+"Submit to Google Indexing API" 스텝이 준비돼 있고, **secret 이 있을 때만** 동작합니다(없으면 건너뜀).
+
+> ⚠️ 구글 Indexing API는 공식적으로 JobPosting·BroadcastEvent 전용입니다. 일반 페이지
+> 통보는 비공식이라 무시될 수 있습니다. 구글 색인의 정식 경로는 **Search Console 사이트맵 제출**이며,
+> 본 기능은 보조 수단입니다.
+
+설정(쓰려는 경우):
+1. Google Cloud Console → 프로젝트 생성 → **Indexing API** 사용 설정
+2. **서비스 계정** 생성 → JSON 키 다운로드
+3. Search Console → 속성 `suwon-massage.pages.dev` → 설정 → 사용자 및 권한 →
+   서비스 계정 이메일(`...iam.gserviceaccount.com`)을 **소유자**로 추가
+4. GitHub → 저장소 Settings → Secrets and variables → Actions →
+   **`GOOGLE_INDEXING_SA`** 에 JSON 키 파일 내용 전체를 붙여넣기
+5. 이후 main 푸시 시 IndexNow와 함께 구글에도 자동 통보됩니다.
+
+수동 실행:
+
+```bash
+GOOGLE_INDEXING_SA="$(cat service-account.json)" node google-index.mjs        # 전체
+GOOGLE_INDEXING_SA="$(cat service-account.json)" node google-index.mjs /course/aroma/
+node google-index.mjs --dry                                                   # 대상만 확인
+```
+
 > 도메인을 바꾸면 `build-site.mjs`의 `siteUrl`·`indexNowKey`, `indexnow.mjs`의 상수,
 > `.github/workflows/indexnow.yml`의 `SITE` 값을 함께 수정하세요.
 

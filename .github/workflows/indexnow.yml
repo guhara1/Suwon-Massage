@@ -44,3 +44,9 @@ jobs:
 
       - name: Submit to IndexNow
         run: node indexnow.mjs ${{ steps.urls.outputs.args }}
+
+      # 구글 Indexing API (옵션) — secret GOOGLE_INDEXING_SA 가 있을 때만 실제 전송
+      - name: Submit to Google Indexing API
+        env:
+          GOOGLE_INDEXING_SA: ${{ secrets.GOOGLE_INDEXING_SA }}
+        run: node google-index.mjs ${{ steps.urls.outputs.args }}
