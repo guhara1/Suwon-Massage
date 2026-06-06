@@ -423,7 +423,7 @@ function buildHome() {
 </main>`;
   return layout({
     title: `수원 출장마사지 예약 안내 | ${brand}`,
-    description: `${brand} 수원 출장마사지 - 장안·권선·팔달·영통 전 지역 방문 마사지 예약 안내. 피로 회복·아로마·스포츠 코스, 24시간 예약 상담 ${phone}.`,
+    description: `수원 출장마사지 예약 안내. ${brand}가 장안·권선·팔달·영통 전 지역으로 방문합니다. 24시간 예약 상담.`,
     canonicalPath: "/", isHome: true, jsonLd: [websiteLd, orgLd], bodyContent: body,
   });
 }
@@ -481,7 +481,7 @@ function buildSuwonMain() {
   const sideExtra = `<div class="side-card"><h4>구별 안내</h4><div class="side-links">${suwonGu.map((g) => `<a href="/suwon/${g.slug}/">${g.name} 출장마사지</a>`).join("\n      ")}</div></div>`;
   return articlePage({
     title: "수원출장마사지 | 수원 전지역 방문 마사지 예약 안내",
-    description: "수원 장안구, 권선구, 팔달구, 영통구 출장마사지 예약 안내 페이지입니다. 코스, 이용시간, 출장 가능 지역, 예약 전 확인사항을 확인해보세요.",
+    description: "수원 장안·권선·팔달·영통 출장마사지 예약 안내. 코스, 이용시간, 방문 가능 지역, 예약 전 확인사항을 확인하세요.",
     canonicalPath: "/suwon/", h1: "수원 출장마사지 예약 안내", lead: `${brand}는 수원 장안·권선·팔달·영통 전 지역으로 방문합니다.`,
     proseHtml: prose, crumbs, sideExtra,
     jsonLd: [serviceLd({ name: "수원 출장마사지", description: "수원 전지역 방문 마사지 예약 안내", url: `${siteUrl}/suwon/`, areaServed: "수원시" }), faqLd(faqs)],
@@ -533,7 +533,7 @@ function buildGu(g) {
     <div class="side-card"><h4>다른 구</h4><div class="side-links">${suwonGu.filter((x) => x.slug !== g.slug).map((x) => `<a href="/suwon/${x.slug}/">${x.name} 출장마사지</a>`).join("\n      ")}</div></div>`;
   return articlePage({
     title: `${g.name} 출장마사지 | 수원 ${g.name} 방문 마사지 안내`,
-    description: `${g.name} 출장마사지 - ${g.dongs.map((d) => d.name).slice(0, 6).join(", ")} 등 ${g.name} 생활권별 방문 조건과 예약 안내. 건전한 휴식 관리, 예약 ${phone}.`.replace(/\s+/g, " "),
+    description: `${g.name} 출장마사지. ${g.dongs.map((d) => d.name).slice(0, 3).join("·")} 등 수원 ${g.name} 생활권별 방문 마사지 예약 안내.`,
     h1: `${g.name} 출장마사지 예약 안내`, lead: g.intro,
     proseHtml: prose, crumbs, sideExtra,
     jsonLd: [serviceLd({ name: `${g.name} 출장마사지`, description: g.intro, url: `${siteUrl}/suwon/${g.slug}/`, areaServed: `수원시 ${g.name}` }), faqLd(g.faq)],
@@ -588,7 +588,7 @@ function buildDong(g, d) {
   const sideExtra = `<div class="side-card"><h4>${g.name} 다른 지역</h4><div class="side-links"><a href="/suwon/${g.slug}/">${g.name} 전체</a>${others.map((x) => `\n      <a href="/suwon/${g.slug}/${x.slug}/">${x.name} 출장마사지</a>`).join("")}</div></div>`;
   return articlePage({
     title: `${d.name} 출장마사지 | 수원 ${g.name} ${d.name} 방문 마사지`,
-    description: `${d.name} 출장마사지 - ${d.intro}`.replace(/\s+/g, " ").slice(0, 150),
+    description: `${d.name} 출장마사지 - ${d.zone} 방문 마사지 예약 안내.`.replace(/\s+/g, " ").slice(0, 79),
     h1: `${d.name} 출장마사지 예약 안내`, lead: d.intro.slice(0, 120),
     proseHtml: prose, crumbs, sideExtra,
     jsonLd: [serviceLd({ name: `${d.name} 출장마사지`, description: d.intro.slice(0, 200), url: `${siteUrl}/suwon/${g.slug}/${d.slug}/`, areaServed: `수원시 ${g.name} ${d.name}` }), faqLd(d.faqs)],
@@ -634,7 +634,7 @@ function buildCourseIndex() {
   const sideExtra = `<div class="side-card"><h4>코스</h4><div class="side-links">${courses.map((c) => `<a href="/course/${c.slug}/">${c.name}</a>`).join("\n    ")}\n    <a href="/course/price/">코스별 가격 안내</a>\n    <a href="/course/guide/">코스 선택 가이드</a></div></div>`;
   return articlePage({
     title: `코스안내 | 수원 출장마사지 코스 | ${brand}`,
-    description: `${brand} 코스안내 - 피로 회복·아로마·스포츠·커플/가족·기업 방문 관리. 컨디션에 맞춘 건전한 휴식 코스를 확인하세요. 예약 ${phone}.`,
+    description: `${brand} 코스안내. 피로 회복·아로마·스포츠·커플/가족·기업 방문 관리 코스를 확인하세요.`,
     h1: "코스안내", lead: "컨디션과 상황에 맞춰 선택할 수 있는 대표 코스입니다.",
     proseHtml: prose, crumbs, sideExtra, jsonLd: [orgLd],
   });
@@ -692,7 +692,7 @@ function buildCourse(c) {
   const sideExtra = `<div class="side-card"><h4>다른 코스</h4><div class="side-links">${courses.filter((x) => x.slug !== c.slug).map((x) => `<a href="/course/${x.slug}/">${x.name}</a>`).join("\n    ")}\n    <a href="/course/price/">코스별 가격 안내</a></div></div>`;
   return articlePage({
     title: `${c.name} | 수원 출장마사지 코스 | ${brand}`,
-    description: `${c.name} - ${c.intro} 수원 전지역 방문 가능, 예약 ${phone}.`.replace(/\s+/g, " ").slice(0, 150),
+    description: `${c.name} - ${c.short} 수원 전지역 방문 가능.`.replace(/\s+/g, " ").slice(0, 79),
     h1: `${c.name} 안내`, lead: c.intro,
     proseHtml: prose, crumbs, sideExtra,
     jsonLd: [serviceLd({ name: c.name, description: c.intro, url: `${siteUrl}/course/${c.slug}/`, areaServed: "수원시" }), faqLd(faqs)],
@@ -740,7 +740,7 @@ function buildCoursePrice() {
   const crumbs = [{ name: "홈", path: "/" }, { name: "코스안내", path: "/course/" }, { name: "코스별 가격 안내", path: "/course/price/" }];
   return articlePage({
     title: `코스별 가격 안내 | 수원 출장마사지 요금 | ${brand}`,
-    description: `수원 출장마사지 코스별 가격 안내 - 60·90·120분 기준과 출장비 안내. 정확한 요금은 예약 시 안내드립니다. 예약 ${phone}.`,
+    description: `수원 출장마사지 코스별 가격 안내. 60·90·120분 기준과 출장비, 정확한 요금은 예약 시 안내드립니다.`,
     h1: "코스별 가격 안내", lead: "관리 시간 기준 요금과 출장비 안내입니다.",
     proseHtml: prose, crumbs, jsonLd: [faqLd(faqs)],
   });
@@ -792,7 +792,7 @@ function buildCourseGuide() {
   const crumbs = [{ name: "홈", path: "/" }, { name: "코스안내", path: "/course/" }, { name: "코스 선택 가이드", path: "/course/guide/" }];
   return articlePage({
     title: `코스 선택 가이드 | 수원 출장마사지 | ${brand}`,
-    description: `수원 출장마사지 코스 선택 가이드 - 휴식·활동 피로·동시 관리 등 상황별 추천 코스를 안내합니다. 예약 ${phone}.`,
+    description: `수원 출장마사지 코스 선택 가이드. 휴식·활동 피로·동시 관리 등 상황별 추천 코스를 안내합니다.`,
     h1: "코스 선택 가이드", lead: "상황과 컨디션에 맞는 코스를 고르는 기준입니다.",
     proseHtml: prose, crumbs, jsonLd: [faqLd(faqs)],
   });
@@ -845,7 +845,7 @@ function buildReservation() {
   const crumbs = [{ name: "홈", path: "/" }, { name: "예약안내", path: "/reservation/" }];
   return articlePage({
     title: `예약안내 | 수원 출장마사지 예약 방법 | ${brand}`,
-    description: `수원 출장마사지 예약안내 - 예약 방법, 예약 가능 시간, 방문 가능 장소, 결제·취소 안내. 24시간 예약 상담 ${phone}.`,
+    description: `수원 출장마사지 예약안내. 예약 방법, 예약 가능 시간, 방문 가능 장소, 결제·취소를 안내합니다.`,
     h1: "예약안내", lead: "예약 방법부터 결제·취소까지 한 번에 확인하세요.",
     proseHtml: prose, crumbs, jsonLd: [faqLd(faqs)],
   });
@@ -896,7 +896,7 @@ function buildGuide() {
   const crumbs = [{ name: "홈", path: "/" }, { name: "이용가이드", path: "/guide/" }];
   return articlePage({
     title: `이용가이드 | 수원 출장마사지 이용 안내 | ${brand}`,
-    description: `수원 출장마사지 이용가이드 - 처음 이용, 방문 전 준비, 위생·안전, 관리 후 주의, 금지행위 안내. 예약 ${phone}.`,
+    description: `수원 출장마사지 이용가이드. 처음 이용, 방문 전 준비, 위생·안전, 관리 후 주의, 금지행위를 안내합니다.`,
     h1: "이용가이드", lead: "처음 이용하시는 분을 위한 안내와 주의사항입니다.",
     proseHtml: prose, crumbs, jsonLd: [faqLd(faqs)],
   });
@@ -935,7 +935,7 @@ function buildReviewsIndex() {
   const sideExtra = `<div class="side-card"><h4>구별 후기</h4><div class="side-links">${suwonGu.map((g) => `<a href="/reviews/${g.slug}/">${g.name} 후기</a>`).join("\n    ")}</div></div>`;
   return articlePage({
     title: `고객후기 | 수원 출장마사지 이용 후기 | ${brand}`,
-    description: `${brand} 수원 출장마사지 고객후기 - 장안·권선·팔달·영통 구별 이용 후기를 확인하세요. 예약 ${phone}.`,
+    description: `${brand} 수원 출장마사지 고객후기. 장안·권선·팔달·영통 구별 이용 후기를 확인하세요.`,
     h1: "고객후기", lead: "실제 이용 고객님이 남겨주신 대표 후기입니다.",
     proseHtml: prose, crumbs, sideExtra, jsonLd: [orgLd],
   });
@@ -973,7 +973,7 @@ function buildReviewsGu(g) {
   const sideExtra = `<div class="side-card"><h4>다른 구 후기</h4><div class="side-links"><a href="/reviews/">전체 후기</a>${suwonGu.filter((x) => x.slug !== g.slug).map((x) => `\n    <a href="/reviews/${x.slug}/">${x.name} 후기</a>`).join("")}</div></div>`;
   return articlePage({
     title: `${g.name} 후기 | 수원 ${g.name} 출장마사지 후기 | ${brand}`,
-    description: `수원 ${g.name} 출장마사지 고객후기 - ${g.name} 지역 이용 후기와 이용 특징을 확인하세요. 예약 ${phone}.`,
+    description: `수원 ${g.name} 출장마사지 고객후기. ${g.name} 지역 이용 후기와 이용 특징을 확인하세요.`,
     h1: `${g.name} 출장마사지 후기`, lead: `${g.name} 지역 이용 후기입니다.`,
     proseHtml: prose, crumbs, sideExtra, jsonLd: [orgLd],
   });
@@ -1019,7 +1019,7 @@ function buildCustomer() {
   const crumbs = [{ name: "홈", path: "/" }, { name: "고객센터", path: "/customer/" }];
   return articlePage({
     title: `고객센터 | 수원 출장마사지 문의 | ${brand}`,
-    description: `${brand} 고객센터 - 공지사항, 자주 묻는 질문, 1:1 문의, 제휴·기업 문의 안내. 24시간 예약 상담 ${phone}.`,
+    description: `${brand} 고객센터. 공지사항, 자주 묻는 질문, 1:1 문의, 제휴·기업 문의를 안내합니다.`,
     h1: "고객센터", lead: "문의와 안내를 한 곳에서 확인하세요.",
     proseHtml: prose, crumbs, jsonLd: [faqLd(faqs)],
   });
@@ -1068,7 +1068,7 @@ function buildPrivacy() {
   const crumbs = [{ name: "홈", path: "/" }, { name: "개인정보처리방침", path: "/privacy-policy/" }];
   return articlePage({
     title: `개인정보처리방침 | ${brand}`,
-    description: `${brand} 개인정보처리방침 - 개인정보 수집 항목, 이용 목적, 보유 기간, 제3자 제공, 이용자 권리 안내.`,
+    description: `${brand} 개인정보처리방침. 수집 항목, 이용 목적, 보유 기간, 이용자 권리를 안내합니다.`,
     h1: "개인정보처리방침", lead: "", proseHtml: prose, crumbs, jsonLd: [],
   });
 }
@@ -1169,9 +1169,14 @@ function mainLen(html) {
   // 공백 포함 글자수(한국 글자수 세기 관례) — 태그 제거 후 공백 1칸으로 정규화
   return m[0].replace(/<[^>]+>/g, " ").replace(/&[a-z]+;/g, " ").replace(/\s+/g, " ").trim().length;
 }
+function descOf(html) {
+  const m = html.match(/<meta name="description" content="([^"]*)"/);
+  return m ? m[1] : "";
+}
 async function emit(rel, html, report) {
   await writeFile(rel, html);
-  report.push({ rel, len: mainLen(html) });
+  const desc = descOf(html);
+  report.push({ rel, len: mainLen(html), descLen: desc.length, desc });
 }
 async function main() {
   const report = [];
@@ -1207,5 +1212,15 @@ async function main() {
   if (under.length) { console.log(`   ⚠ 2000자 미만 ${under.length}개:`); under.forEach((r) => console.log(`     ${String(r.len).padStart(5)}  ${r.rel}`)); }
   else console.log("   ✓ 모든 페이지 2000자 이상");
   if (over.length) { console.log(`   ⚠ 2600자 초과 ${over.length}개:`); over.forEach((r) => console.log(`     ${String(r.len).padStart(5)}  ${r.rel}`)); }
+
+  // 메타 설명: 80자 이내 + 중복 없음 (네이버 권장)
+  const descOver = report.filter((r) => r.descLen > 80);
+  const seen = {}, dupDesc = [];
+  for (const r of report) { if (seen[r.desc]) dupDesc.push(r.rel); else seen[r.desc] = r.rel; }
+  console.log(`   설명 길이: 최대 ${Math.max(...report.map((r) => r.descLen))}자`);
+  if (descOver.length) { console.log(`   ⚠ 설명 80자 초과 ${descOver.length}개:`); descOver.forEach((r) => console.log(`     ${String(r.descLen).padStart(3)}자  ${r.rel}`)); }
+  else console.log("   ✓ 모든 설명 80자 이내");
+  if (dupDesc.length) { console.log(`   ⚠ 설명 중복 ${dupDesc.length}개:`); dupDesc.forEach((r) => console.log(`     ${r}`)); }
+  else console.log("   ✓ 설명 중복 없음");
 }
 main().catch((e) => { console.error(e); process.exit(1); });
