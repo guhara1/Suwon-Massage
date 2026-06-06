@@ -44,6 +44,17 @@ node build-site.mjs
 - 의료 효과·과장 표현 없음, 건전성(성적 서비스 거절·금지행위) 문구 일관 노출
 - 키워드 스터핑(같은 표현 반복 나열) 회피
 
+## 데이터 구조
+
+```text
+build-site.mjs          # 템플릿·홈·코스·예약·가이드·후기·고객센터·SEO 생성기 + 글자수 검증
+data/areas.mjs          # 4개 구 메타데이터(intro·생활권·이동·FAQ) + 후기
+data/dongs/<gu>.mjs      # 구별 동 상세 콘텐츠(동마다 고유 생활권·건물·이동·FAQ)
+```
+
+각 페이지 본문은 2,000~2,500자(공백 포함)로 작성됐고, `node build-site.mjs` 실행 시
+모든 페이지의 본문 글자수를 검증해 2,000자 미만 페이지를 경고로 출력합니다.
+
 ## 데이터 수정 위치 (`build-site.mjs` 상단)
 
 ```js
@@ -51,7 +62,7 @@ const siteUrl  = "https://새도메인";
 const brand    = "새 상호명";
 const phone    = "새 전화번호";
 const naverVerify / googleVerify  // 검색엔진 인증 코드
-// 데이터: courses, suwonGu(구·동), reviewsByGu
+// 데이터: courses(build-site.mjs), suwonGu(data/areas.mjs + data/dongs/*), reviewsByGu(data/areas.mjs)
 ```
 
 ## 배포
