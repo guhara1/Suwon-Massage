@@ -73,6 +73,29 @@ GitHub main → Cloudflare Pages 자동 배포 → 라이브 반영
 
 배포 후 Search Console / Naver Search Advisor 에 sitemap 제출.
 
+## IndexNow (빙·네이버 즉시 색인 통보)
+
+새 글/수정 페이지를 Bing·Naver에 즉시 알리는 IndexNow가 설정돼 있습니다.
+
+- **키**: `4f3765781ec57f6460f12aff064f67da`
+- **키 파일**: 루트에 `4f3765781ec57f6460f12aff064f67da.txt` (빌드 시 자동 생성, 내용은 키 그대로)
+  - 라이브 확인: `https://suwon-massage.pages.dev/4f3765781ec57f6460f12aff064f67da.txt`
+- **자동 통보**: `.github/workflows/indexnow.yml` — main 에 페이지가 푸시되면
+  Cloudflare 배포(120초 대기) 후 바뀐 페이지 URL을 IndexNow에 자동 제출 (변경분 없으면 sitemap 전체)
+- **수동 통보**: `indexnow.mjs`
+
+```bash
+node indexnow.mjs                       # sitemap 전체 제출
+node indexnow.mjs /course/aroma/        # 특정 페이지만
+node indexnow.mjs --dry                 # 전송 없이 대상만 확인
+```
+
+제출 엔드포인트: `api.indexnow.org`, `www.bing.com`, `searchadvisor.naver.com`
+(IndexNow는 참여 검색엔진끼리 제출을 공유하며, 키 파일이 라이브여야 검증됩니다.)
+
+> 도메인을 바꾸면 `build-site.mjs`의 `siteUrl`·`indexNowKey`, `indexnow.mjs`의 상수,
+> `.github/workflows/indexnow.yml`의 `SITE` 값을 함께 수정하세요.
+
 ## 현재 규모
 
 페이지 52개 (홈1 · 수원허브1 · 구4 · 동29 · 코스8 · 예약1 · 가이드1 · 후기5 · 고객센터1 · 개인정보1)

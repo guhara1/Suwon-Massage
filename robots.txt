@@ -13,6 +13,6 @@ Allow: /
 User-agent: Daumoa
 Allow: /
 
-Sitemap: https://sevenrock-massage.pages.dev/sitemap.xml
-Sitemap: https://sevenrock-massage.pages.dev/sitemap1.xml
-Sitemap: https://sevenrock-massage.pages.dev/rss.xml
+Sitemap: https://suwon-massage.pages.dev/sitemap.xml
+Sitemap: https://suwon-massage.pages.dev/sitemap1.xml
+Sitemap: https://suwon-massage.pages.dev/rss.xml

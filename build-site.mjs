@@ -12,7 +12,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = __dirname;
 
 /* ===================== 1. 기본 값 ===================== */
-const siteUrl = "https://sevenrock-massage.pages.dev";
+const siteUrl = "https://suwon-massage.pages.dev";
 const brand = "세븐록 마사지";
 const brandEn = "SEVENROCK";
 const phone = "0508-202-4743";
@@ -21,6 +21,7 @@ const smsHref = "sms:0508-202-4743";
 const buildDate = "2026-06-06";
 const naverVerify = "여기에-네이버-인증코드";
 const googleVerify = "여기에-구글-인증코드";
+const indexNowKey = "4f3765781ec57f6460f12aff064f67da"; // IndexNow API 키 (빙·네이버 즉시 색인)
 
 /* ===================== 2. 코스 데이터 (rich) ===================== */
 const courses = [
@@ -1196,6 +1197,8 @@ async function main() {
   await writeFile("sitemap1.xml", sm);
   await writeFile("rss.xml", buildRss(urls));
   await writeFile("robots.txt", robotsTxt);
+  // IndexNow 키 파일 (루트에 <key>.txt, 내용은 키 그대로)
+  await writeFile(`${indexNowKey}.txt`, indexNowKey);
 
   const under = report.filter((r) => r.len < 2000);
   const over = report.filter((r) => r.len > 2600);

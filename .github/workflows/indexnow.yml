@@ -1,0 +1,46 @@
+name: IndexNow Ping
+
+# main 에 글(페이지)이 올라가면 Bing·Naver에 즉시 색인 통보
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/index.html"
+      - "sitemap.xml"
+  workflow_dispatch: {} # 수동 실행도 가능
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # Cloudflare Pages 배포가 끝나 키 파일·새 페이지가 라이브가 될 때까지 대기
+      - name: Wait for Cloudflare Pages deploy
+        run: sleep 120
+
+      # 이번 푸시에서 바뀐 페이지 URL만 추출 (없으면 전체 sitemap 제출)
+      - name: Compute changed page URLs
+        id: urls
+        run: |
+          SITE='https://suwon-massage.pages.dev'
+          BASE='${{ github.event.before }}'
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then
+            echo "args=" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          CHANGED=$(git diff --name-only "$BASE" '${{ github.sha }}' -- '**/index.html' 'index.html' || true)
+          ARGS=""
+          for f in $CHANGED; do
+            d="${f%index.html}"          # 디렉터리 경로 (루트는 빈 값)
+            ARGS="$ARGS ${SITE}/${d}"
+          done
+          echo "args=$ARGS" >> "$GITHUB_OUTPUT"
+
+      - name: Submit to IndexNow
+        run: node indexnow.mjs ${{ steps.urls.outputs.args }}
