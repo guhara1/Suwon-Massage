@@ -19,7 +19,7 @@ const phone = "0508-202-4743";
 const telHref = "tel:0508-202-4743";
 const smsHref = "sms:0508-202-4743";
 const buildDate = "2026-06-06";
-const naverVerify = "여기에-네이버-인증코드";
+const naverVerify = "74c56f85297b96c74d6a4cf2f356e04701ba451c";
 const googleVerify = "여기에-구글-인증코드";
 const indexNowKey = "4f3765781ec57f6460f12aff064f67da"; // IndexNow API 키 (빙·네이버 즉시 색인)
 
