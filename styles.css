@@ -99,6 +99,16 @@ img, svg { max-width: 100%; display: block; }
   grid-template-columns: 1fr;
   gap: 2px;
 }
+/* 트리거와 드롭다운 사이 6px 간격을 투명 영역으로 메워 hover 끊김 방지 */
+.dropdown::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  height: 12px;
+  background: transparent;
+}
 .dropdown.cols-2 { grid-template-columns: 1fr 1fr; min-width: 320px; }
 .nav-item:hover .dropdown,
 .nav-item:focus-within .dropdown { display: grid; }
