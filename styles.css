@@ -341,9 +341,23 @@ section { padding: 64px 0; }
   text-align: center;
 }
 .price-card.featured { border-color: var(--accent-2); box-shadow: var(--shadow); }
-.price-card .time { font-size: 14px; color: var(--muted); }
-.price-card .price { font-size: 30px; font-weight: 800; margin: 8px 0; color: var(--accent); }
-.price-card .price small { font-size: 14px; color: var(--muted-2); font-weight: 500; }
+.price-card { position: relative; }
+.price-card .badge {
+  position: absolute;
+  top: -13px; left: 50%; transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #2a1c10;
+  font-weight: 800; font-size: 12px;
+  padding: 5px 16px; border-radius: 999px;
+  white-space: nowrap;
+}
+.price-card .time { font-size: 15px; font-weight: 700; color: var(--text); }
+.price-card .price { font-size: 32px; font-weight: 800; margin: 10px 0 2px; color: var(--text); }
+.price-card.featured .price { color: var(--accent); }
+.price-card .price small { font-size: 15px; color: var(--muted); font-weight: 600; margin-left: 2px; }
+.price-card .per { font-size: 13px; color: var(--accent-2); margin-bottom: 14px; }
+.price-card .desc { font-size: 14px; color: var(--muted); margin-bottom: 18px; min-height: 21px; }
+.price-card .btn { width: 100%; justify-content: center; }
 .price-card ul { list-style: none; padding: 0; margin: 16px 0 0; text-align: left; }
 .price-card li { padding: 6px 0; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); }
 .price-note {
@@ -352,6 +366,8 @@ section { padding: 64px 0; }
   font-size: 13px;
   text-align: center;
 }
+.price-note a { color: var(--accent); font-weight: 700; }
+.price-note a:hover { text-decoration: underline; }
 
 /* ---------- FAQ ---------- */
 .faq-list { display: grid; gap: 10px; }

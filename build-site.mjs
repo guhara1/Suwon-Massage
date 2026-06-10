@@ -298,6 +298,46 @@ function sidebar(extra = "") {
 }
 const list = (arr) => `<ul>${arr.map((x) => `<li>${x}</li>`).join("")}</ul>`;
 
+// 코스별 기본 요금 (한 곳에서 관리)
+const PRICES = [
+  { t: "60분 코스", p: "90,000", per: "60분", desc: "기본 컨디션·릴랙스 케어" },
+  { t: "90분 코스", p: "150,000", per: "90분", desc: "아로마 포함 추천 구성", featured: true },
+  { t: "120분 코스", p: "180,000", per: "120분", desc: "전신 집중 프리미엄 케어" },
+];
+function priceCards() {
+  return `<div class="price-grid">
+    ${PRICES.map((c) => `<div class="price-card${c.featured ? " featured" : ""}">
+      ${c.featured ? '<span class="badge">추천</span>' : ""}
+      <div class="time">${c.t}</div>
+      <div class="price">${c.p}<small>원</small></div>
+      <div class="per">${c.per}</div>
+      <div class="desc">${c.desc}</div>
+      <a class="btn ${c.featured ? "btn-primary" : "btn-ghost"}" href="${telHref}">예약 문의</a>
+    </div>`).join("\n    ")}
+  </div>`;
+}
+function priceGrid() {
+  return `${priceCards()}
+  <p class="price-note">지역·예약 시간대·이동 거리에 따라 상담 시 최종 확인됩니다. <a href="/course/price/">상세 요금 안내 보기 →</a></p>`;
+}
+// 본문(prose) 삽입용 요금 블록
+function priceBlock() {
+  return `
+        <h2>코스별 기본 요금</h2>
+        <p>60·90·120분 코스별 기본 요금입니다. 숨겨진 추가 비용 없이 투명하게 안내합니다.</p>
+        ${priceGrid()}`;
+}
+// 홈 섹션용 요금 블록
+function priceSection() {
+  return `
+  <section id="price">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">PRICE</span><h2>코스별 기본 요금</h2><p>60·90·120분 코스별 기본 요금입니다. 숨겨진 추가 비용 없이 투명하게 안내합니다.</p></div>
+      ${priceGrid()}
+    </div>
+  </section>`;
+}
+
 async function writeFile(rel, content) {
   const full = path.join(ROOT, rel);
   await fs.mkdir(path.dirname(full), { recursive: true });
@@ -371,6 +411,8 @@ function buildHome() {
       </div>
     </div>
   </section>
+
+  ${priceSection()}
 
   <section id="areas">
     <div class="wrap">
@@ -450,6 +492,7 @@ function buildSuwonMain() {
         <h2 id="course">이용 가능한 코스</h2>
         <p>피로 회복·아로마·스포츠 관리 등 휴식 중심 코스를 컨디션에 맞춰 선택할 수 있으며, 두 분이 함께 받는 커플/가족 관리와 단체를 위한 기업/단체 방문 관리도 운영합니다. 각 코스의 진행 방식과 추천 시간은 <a href="/course/">코스안내</a>에서 자세히 확인할 수 있습니다.</p>
         ${list(courses.map((c) => `<strong>${c.name}</strong> – ${c.short}`))}
+        ${priceBlock()}
 
         <h2 id="process">예약 진행 방식</h2>
         <p>예약은 어렵지 않습니다. 아래 순서대로 진행됩니다.</p>
@@ -503,6 +546,7 @@ function buildGu(g) {
 
         <h2>${g.name}에서 많이 찾는 코스</h2>
         <p>${g.course} 코스별 진행 방식은 <a href="/course/">코스안내</a>에서 확인하세요.</p>
+        ${priceBlock()}
 
         <h2>이동·주차 안내</h2>
         <p>${g.access}</p>
@@ -564,6 +608,7 @@ function buildDong(g, d) {
 
         <h2>${d.name} 추천 코스</h2>
         <p>${d.course} 코스별 자세한 내용은 <a href="/course/">코스안내</a>에서 확인할 수 있습니다.</p>
+        ${priceBlock()}
 
         <h2>예약 가능 시간</h2>
         <p>${d.name}은(는) 오전부터 심야까지 시간대를 협의해 안내드리며 당일 예약도 가능합니다. 원하는 시간대가 있으면 미리 문의하시는 편이 좋습니다.</p>
@@ -708,14 +753,10 @@ function buildCoursePrice() {
     { q: "현장에서 금액이 달라지지 않나요?", a: "달라지지 않습니다. 출장비를 포함한 전체 금액을 예약 시 미리 안내드리므로, 방문 후 예상치 못한 비용이 추가되지 않습니다." },
   ];
   const prose = `
-        <h2>코스별 가격 안내</h2>
-        <p>${brand}의 요금은 관리 시간을 기준으로 안내됩니다. 코스 종류와 관계없이 시간 단위로 구성되며, 정확한 요금과 출장비는 예약 시 명확하게 안내드립니다. 표시되지 않은 추가 비용이나 숨겨진 비용은 없습니다.</p>
-        <div class="price-grid">
-          <div class="price-card"><div class="time">60분 코스</div><div class="price">예약 시 안내</div><ul><li>전신 기본 관리</li><li>처음 이용 시 추천</li><li>부담 없는 시간대</li></ul></div>
-          <div class="price-card featured"><div class="time">90분 코스</div><div class="price">예약 시 안내</div><ul><li>전신 + 집중 부위</li><li>가장 많이 찾는 코스</li><li>충분한 이완</li></ul></div>
-          <div class="price-card"><div class="time">120분 코스</div><div class="price">예약 시 안내</div><ul><li>전신 + 스트레칭/집중</li><li>여유로운 관리</li><li>심화 휴식</li></ul></div>
-        </div>
-        <p class="price-note">※ 지역·시간대에 따라 추가 출장비가 발생할 수 있으며, 심야·장거리 이동은 예약 시 사전 안내드립니다.</p>
+        <h2>코스별 기본 요금</h2>
+        <p>${brand}의 요금은 관리 시간을 기준으로 안내됩니다. 코스 종류와 관계없이 60·90·120분 시간 단위로 구성되며, 아래는 기본 요금입니다. 표시되지 않은 추가 비용이나 숨겨진 비용은 없습니다.</p>
+        ${priceCards()}
+        <p class="price-note">※ 위 금액은 기본 요금이며, 지역·시간대·이동 거리에 따라 추가 출장비가 발생할 수 있습니다. 심야·장거리 이동은 예약 시 사전 안내드립니다.</p>
 
         <h2>시간대별 안내</h2>
         <p>60분은 전신을 한 번 고르게 풀어주는 기본 구성으로, 처음 이용하시거나 짧게 휴식하고 싶을 때 적합합니다. 90분은 전신을 충분히 관리하면서 어깨·허리 등 집중 부위까지 다룰 수 있어 가장 많이 선택하는 시간대입니다. 120분은 전신과 집중 관리, 스트레칭까지 여유롭게 진행해 깊은 휴식을 원할 때 좋습니다. 커플/가족 관리나 기업/단체 방문 관리는 인원과 구성에 따라 시간이 달라지므로 예약 시 안내드립니다.</p>
